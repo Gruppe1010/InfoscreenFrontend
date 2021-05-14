@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 @RequestMapping("{orgName}")
 @CrossOrigin(value = "*")
@@ -47,6 +48,13 @@ public class FrontendController {
         model.addAttribute("orgName", orgName);
 
         return "createAccount";
+    }
+
+    @GetMapping("t")
+    public String test(@PathVariable String orgName, Model model){
+        model.addAttribute("orgName", orgName);
+
+        return "test";
     }
 
 
