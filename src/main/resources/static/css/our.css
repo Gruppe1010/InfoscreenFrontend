@@ -1,3 +1,7 @@
 .color{
     background-color: #3d8c8c;
 }
+
+.line{
+    border-right: solid white;
+}
