@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+
+<!-------------------- ! HEADER -->
+<!-- th:remove="tag" == fjerner div'en og indsætter bare det som ER i div'en -->
+<div th:fragment="header(title)" th:remove="tag">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title th:text="${title}"></title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!--<link href="../static/css/styles.css" rel="stylesheet" /> --> <!-- ! åben direkte -->
+    <link href="/css/styles.css" rel="stylesheet" /> <!-- ! på localhost -->
+</div>
+
+<!-------------------- ! NAVBAR -->
+<nav th:fragment="navbar(active)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top color">
+    <div class="container color">
+        <a class="navbar-brand line" href="/">Alle slides</a>
+        <a class="navbar-brand" href="/createSlide">Opret slide</a>
+        <a class="navbar-brand" href="/slideShow">Slideshow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- <script src="../js/jquery.js"></script> --> <!-- ! åben direkte -->
+<!-- <script src="../js/jsdelivr.js"></script> --> <!-- ! åben direkte -->
+
+<script src="/templates/jquery.js/jquery.js"></script> <!-- ! på localhost -->
+<script src="/templates/jsdelivr.js/jsdelivr.js"></script> <!-- ! på localhost -->
+
+</body>
+</html>
