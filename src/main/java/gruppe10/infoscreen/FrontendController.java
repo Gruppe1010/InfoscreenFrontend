@@ -14,8 +14,6 @@ public class FrontendController {
     @GetMapping("/")
     public String index(@PathVariable String orgName, Model model){
         model.addAttribute("orgName", orgName);
-        System.out.println("Vi rammer index");
-        System.out.println(orgName);
 
         return "index";
     }
@@ -33,6 +31,22 @@ public class FrontendController {
         model.addAttribute("slideId", id);
 
         return "editSlide";
+    }
+
+    @GetMapping("slideshow")
+    public String slideshow(@PathVariable String orgName, Model model){
+        model.addAttribute("orgName", orgName);
+
+
+        return "slideshow";
+    }
+
+    @GetMapping("createAccount")
+    public String createAccount(@PathVariable String orgName, Model model){
+        model.addAttribute("orgName", orgName);
+
+
+        return "createAccount";
     }
 
 
