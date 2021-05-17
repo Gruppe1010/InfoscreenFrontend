@@ -20,7 +20,7 @@ body {
 
 img {
     position: absolute;
-    transition: opacity .5s ease-in;
+    transition: opacity 3s ease-in;
 }
 
 img + img { opacity: 0; }
