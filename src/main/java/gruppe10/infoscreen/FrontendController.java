@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontendController {
 
 
-    @GetMapping("/")
+    @GetMapping("")
     public String index(@PathVariable String orgName, Model model){
         model.addAttribute("orgName", orgName);
 
