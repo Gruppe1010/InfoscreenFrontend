@@ -18,7 +18,7 @@ body {
 }
 
 
-img {
+.fadeimage {
     position: absolute;
     transition: opacity 3s ease-in;
 }
